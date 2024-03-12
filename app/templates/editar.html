@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <link rel="stylesheet" href="/app/static/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <form method="POST">
+            <h1>TABLA DE DATOS PARA MODIFICAR</h1>
+            <fieldset>
+                <label>ID</label>
+                <br>
+                <input type="number"  name="idper" value="{{ personas[0] }}" disabled>
+                <br>
+                <label>NOMBRE</label>
+                <br>
+                <input type="text" placeholder="ingresar su nombre" name="nombreper" value="{{ personas[1] }}" >
+                <br>
+                <label>APELLIDO</label>
+                <br>
+                <input type="text" placeholder="ingresar su apellido" name="apellidoper" value="{{ personas[2] }}" >
+                <br>
+                <label>EMAIL</label>
+                <br>
+                <input type="email" placeholder="ingresar su email" name="emailper" value="{{ personas[3] }}" >
+                <br>
+                <label>DIRECCION</label>
+                <br>
+                <input type="text" placeholder="ingrese su Direccion"  name="dirper" value="{{ personas[4] }}" >
+                <br>
+                <label>TELEFONO</label>
+                <br>
+                <input type="number" placeholder="ingrese su telefono"  name="telper" value="{{ personas[5] }}" >
+                <br>
+                <label>USUARIO</label>
+                <br>
+                <input type="text"  placeholder="ingrese su usuario"  name="usuarioper" value="{{ personas[6] }}" disabled>
+                <input type="hidden" name="usuarioper" value="{{ personas[6] }}">
+                <br>
+                <label>CONTRASEÑA</label>
+                <br>
+                <input type="password" placeholder="ingrese su password"  name="passwordper" value="{{ personas[7] }}" >
+                <br>
+                <input type="submit" value="guardar cambios" >
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>

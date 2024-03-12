@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <link rel="stylesheet" href="/app/static/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<div class="container"></div>
+
+    <h1> LISTADO DE USUARIOS </h1>
+
+    <table>
+
+    <tr>
+        <th>Codigo:</th>
+        <th>Nombre:</th>
+        <th>Apellido:</th>
+        <th>Email:</th>
+        <th>Direccion:</th>
+        <th>telefono:</th>
+        <th>Usuario:</th>
+        <th>Acciones:</th>
+
+    </tr>
+    <tbody> 
+        {% for usuario in personas  %}
+        <tr>
+            <td>{{usuario[0]}}</td>
+            <td>{{usuario[1]}}</td>
+            <td>{{usuario[2]}}</td>
+            <td>{{usuario[3]}}</td>
+            <td>{{usuario[4]}}</td>
+            <td>{{usuario[5]}}</td>
+            <td>{{usuario[6]}}</td>
+            <td>
+
+            <a href="{{url_for('editar_usuario',id=usuario[0]) }}">Editar</a>
+            <a href="{{url_for('eliminar_usuario',id=usuario[0]) }} ">Eliminar</a>
+
+            </td>
+            
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</body>
+</div>

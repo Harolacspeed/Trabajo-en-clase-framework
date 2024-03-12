@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <link rel="stylesheet" href="/app/static/css/style.css">
+</head>
+<body>
+        <form method="POST" action="/Registrar" >
+            <fieldset class="nav">
+            <h1>APLICACION CON FLASK</h1>
+                <label>NOMBRE</label>
+                <br>
+                <input type="text" placeholder="ingresar su nombre" required name="NOMBRE">
+                <br>
+                <label>APELLIDO</label>
+                <br>
+                <input type="text" placeholder="ingresar su apellido" required name="APELLIDO">
+                <br>
+                <label>CORREO</label>
+                <br>
+                <input type="email" placeholder="ingresar su correo " required name="CORREO">
+                <br>
+                <label>TELEFONO</label>
+                <br>
+                <input type="tel" placeholder="ingresar su telefono" required name="TELEFONO">
+                <br>
+                <label>DIRECION</label>
+                <br>
+                <input type="text" placeholder="ingresar su telefono" required name="DIRECION">
+                <br>
+                <label>USUARIO</label>
+                <br>
+                <input type="text" placeholder="ingresar su usuario" required name="USUARIO">
+                <br>
+                <label>CONTRASEÑA</label>
+                <br>
+                <input type="password" placeholder="ingresar su contraseña" required name="CONTRASENA">
+                <br>
+                <button>Registrar</button>
+            </fieldset>
+        </form>
+</body>
+</html>
